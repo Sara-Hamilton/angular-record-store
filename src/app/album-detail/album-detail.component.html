@@ -2,13 +2,12 @@
 
 <button class="btn btn-primary" (click)="showReviews()">Show Reviews</button>
 
+<button class="btn btn-primary" (click)="hideReviews()">Hide Reviews</button>
 
 <div *ngIf="revealReviews">
-
-<div *ngFor="let review of reviews" class="card card-default">
-  <div class="card-body">
-    <h3><em>{{review.title}}</em> by {{review.rating}}</h3>
+  <div *ngFor="let review of reviews" class="card card-default">
+    <div class="card-body">
+      <h3><em>{{review.title}}</em> by {{review.rating}}</h3>
+    </div>
   </div>
-</div>
-
 </div>

@@ -31,6 +31,10 @@ export class AlbumDetailComponent implements OnInit {
     this.revealReviews = true;
   }
 
+  hideReviews() {
+    this.revealReviews = false;
+  }
+
   revealReviews = null;
 
 }
