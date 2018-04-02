@@ -1,1 +1,7 @@
 <h2>This album has id number: {{albumId}}</h2>
+
+<div *ngFor="let review of reviews" (click)="showReviews(review)" class="card card-default">
+  <div class="card-body">
+    <h3><em>{{review.title}}</em> by {{review.rating}}</h3>
+  </div>
+</div>
