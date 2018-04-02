@@ -4,13 +4,12 @@
 
 <button class="btn btn-primary" (click)="hideReviews()">Hide Reviews</button>
 
-<!-- <div *ngIf="{{review.album_id}} === {{album.id}}"> -->
-<!-- <div *ngIf="revealReviews"> -->
 
-  <div *ngFor="let review of reviews" (click)="showReviewDetails()" class="card card-default">
+<div *ngIf="revealReviews">
+  <div *ngFor="let review of reviews | albumFilter:albumId" (click)="showReviewDetails()" class="card card-default">
     <div class="card-body">
       <h3><em>{{review.title}}</em> by {{review.rating}}</h3>
       <p *ngIf="reviewDetails">{{review.content}}</p>
     </div>
   </div>
-<!-- </div> -->
+</div>
