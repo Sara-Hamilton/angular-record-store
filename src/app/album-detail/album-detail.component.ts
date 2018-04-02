@@ -35,17 +35,19 @@ export class AlbumDetailComponent implements OnInit {
     this.revealReviews = false;
   }
 
-  showReviewDetails() {
-    this.reviewDetails = true;
+  // hideDetails() {
+  //   this.detailedReview = null;
+  // }
+
+  showReviewDetails(clickedReview) {
+    if(this.detailedReview === null) {
+      this.detailedReview = clickedReview;
+    } else {
+      this.detailedReview = null;
+    }
   }
 
   revealReviews = null;
-  reviewDetails = null;
-
-  // filterByAlbumId: number = 1;
-  //
-  // onChange(optionFromMenu) {
-  // this.filterByAlbumId = optionFromMenu;
-// }
+  detailedReview: Review = null;
 
 }

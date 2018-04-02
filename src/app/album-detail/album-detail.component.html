@@ -1,15 +1,15 @@
 <h2>This album has id number: {{albumId}}</h2>
 
-<button class="btn btn-primary" (click)="showReviews()">Show Reviews</button>
+<!-- <button class="btn btn-primary" (click)="showReviews()">Show Reviews</button>
 
-<button class="btn btn-primary" (click)="hideReviews()">Hide Reviews</button>
+<button class="btn btn-primary" (click)="hideReviews()">Hide Reviews</button> -->
 
 
-<div *ngIf="revealReviews">
-  <div *ngFor="let review of reviews | albumFilter:albumId" (click)="showReviewDetails()" class="card card-default">
+<!-- <div *ngIf="revealReviews"> -->
+  <div *ngFor="let currentReview of reviews | albumFilter:albumId" (click)="showReviewDetails(currentReview)" class="card card-default">
     <div class="card-body">
-      <h3><em>{{review.title}}</em> by {{review.rating}}</h3>
-      <p *ngIf="reviewDetails">{{review.content}}</p>
+      <h3><em>{{currentReview.title}}</em> {{currentReview.rating}} stars</h3>
+      <p *ngIf="detailedReview === currentReview">hey there {{currentReview.content}}</p>
     </div>
   </div>
-</div>
+<!-- </div> -->
