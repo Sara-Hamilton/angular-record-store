@@ -27,12 +27,10 @@ export class AlbumDetailComponent implements OnInit {
     });
   }
 
-  // goToReviewsPage(clickedAlbum: Album) {
-  //      this.router.navigate(['reviews', clickedAlbum.album_id]);
-  //    };
+  showReviews() {
+    this.revealReviews = true;
+  }
 
- showReviews(clickedAlbum: Review) {
-      this.router.navigate(['reviews', clickedAlbum.album_id]);
-    };
+  revealReviews = null;
 
 }
