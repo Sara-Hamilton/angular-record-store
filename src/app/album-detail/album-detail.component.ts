@@ -16,9 +16,9 @@ export class AlbumDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location) {}
 
   reviews: Review[] = [
-    new Review("Loved this Pink Floyd album", 5, "A very good album", 1, 1),
-    new Review("Funhouse is great", 5, "A very good album", 2, 2),
-    new Review("Funhouse is really great", 5, "A very good album", 2, 3),
+    new Review("Loved this Pink Floyd album", 5, "A very good Pink Floyd album", 1, 1),
+    new Review("Funhouse is great", 5, "A very good Funhouse album", 2, 2),
+    new Review("Funhouse is really great", 5, "A so-so Funhouse album", 2, 3),
   ];
 
   ngOnInit() {
@@ -35,6 +35,17 @@ export class AlbumDetailComponent implements OnInit {
     this.revealReviews = false;
   }
 
+  showReviewDetails() {
+    this.reviewDetails = true;
+  }
+
   revealReviews = null;
+  reviewDetails = null;
+
+  // filterByAlbumId: number = 1;
+  //
+  // onChange(optionFromMenu) {
+  // this.filterByAlbumId = optionFromMenu;
+// }
 
 }

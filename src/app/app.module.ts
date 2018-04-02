@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { ReviewDetailComponent } from './review-detail/review-detail.component';
+import { AlbumFilterPipe } from './albumFilter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReviewDetailComponent } from './review-detail/review-detail.component';
     AboutComponent,
     MarketplaceComponent,
     AlbumDetailComponent,
-    ReviewDetailComponent
+    ReviewDetailComponent,
+    AlbumFilterPipe
   ],
   imports: [
     BrowserModule,
